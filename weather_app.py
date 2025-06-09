@@ -35,7 +35,7 @@ class WeatherApp:
             
             if response.status_code == 200:
                 weather = {
-                    '도시': data['name'],
+                    '도시': city_name,  # 원본 한국어 도시명 사용
                     '온도': f"{data['main']['temp']}°C",
                     '날씨': data['weather'][0]['description'],
                     '습도': f"{data['main']['humidity']}%",
